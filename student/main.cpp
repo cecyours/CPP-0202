@@ -5,29 +5,26 @@ using namespace std;
 
 int main()
 {
+    int n;
 
-    // int size;
+    cout << "Enter number of Subject: ";
+    cin >> n;
 
-    // cout << "Enter the size of array" << " :  \n";
-    // cin >> size;
+    int marks[100];
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Enter marks for subject " << i << " : ";
+        cin >> marks[i];
+        cout << endl;
+    }
 
-    // int marks[size];
-    // for (int i = 0; i < size; i++)
-    // {
-    //     cout << "Enter element " << i << ": ";
-    //     cin >> marks[i];
-    // }
+    printMarks(marks, n);
 
-    int size = 5;
-    int marks[size] = {1, 2, 3, 4, 5};
+    cout << "Average marks: "
+         << calculateAvg(marks, n) << endl;
 
-    printMarks(marks, size);
-
-    cout << "Avrage Marks"
-         << calculateAvg(marks, size) << endl;
-
-    cout << "Topper"
-         << findTopper(marks, size) << endl;
+    int topperIndex = findTopper(marks, n);
+    cout << "Topper marks: " << marks[topperIndex] << endl;
 
     return 0;
 }

@@ -1,42 +1,30 @@
 #include <iostream>
-#include "student_util.h"
+#include "student_utils.h"
 
 using namespace std;
 
-void printMarks(int marks[], int size)
-{
-    cout << "Student Marks";
-    for (int i = 0; i < size; i++)
-    {
+void printMarks(int marks[], int n) {
+    cout << "Marks are: ";
+    for (int i = 0; i < n; i++) {
         cout << marks[i] << " ";
     }
     cout << endl;
 }
 
-float calculateAvg(int marks[], int size)
-{
+float calculateAvg(int marks[], int n) {
     int sum = 0;
-
-    for (int i = 0; i < size; i++)
-    {
+    for (int i = 0; i < n; i++) {
         sum += marks[i];
     }
-
-    return sum / size;
+    return (float)sum / n;
 }
 
-// let's say =  55
-
-// 11 , 23 , 55, 1
-int findTopper(int marks[], int size)
-{
-    int maxMarks = marks[0];
-
-    for (int i = 0; i < size; i++)
-    {
-        if (marks[i] > maxMarks)
-        {
-            maxMarks = marks[i];
+int findTopper(int marks[], int n) {
+    int maxIndex = 0;
+    for (int i = 1; i < n; i++) {
+        if (marks[i] > marks[maxIndex]) {
+            maxIndex = i;
         }
     }
+    return maxIndex;
 }
