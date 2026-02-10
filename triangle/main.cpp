@@ -15,6 +15,6 @@ int main()
     for (int i = 0; i < 16; i++)
         printNumbers(field[i], 16);
 
-    // for (int i = 0; i < 16; i++)
-        // printAsterisks(field[i], 16);
+    for (int i = 0; i < 16; i++)
+    printAsterisks(field[i], 16);
 }
