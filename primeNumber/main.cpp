@@ -12,12 +12,11 @@ int main()
     {
         cout << "Computing the n-th prime number! Please enter n: ";
         cin >> index;
-        
-    cout << "The " << index << "th is prime number : "
-         << primeNumber(index) << endl;
+
+        cout << "The " << index << "th is prime number : "
+             << primeNumber(index) << endl;
 
     } while (index != 0);
-
 
     return 0;
 }
